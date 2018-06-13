@@ -6,11 +6,290 @@ head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
     link(rel="stylesheet" href="css/index.css")
-    title TODO:
+    title Eventide
 
-body
+body.main
 
-    h1 Hello, world!
+    //- Заголовок страницы
+
+    .main__header
+
+        //- Логотип
+
+        .main__logo
+
+        //- Адресс и место проведения
+
+        .main__location-address
+
+        //- Какой-то важный текст в самом верху
+
+        .main__top-title
+
+        //- Кнопки
+
+        .flex-container
+
+            a.button.button_angle.button_blue(href="#") Register
+            a.button(href="#") Discover
+
+    //- Основной контент страницы
+
+    .main__content
+
+        //- Цели мероприятия
+
+        .goals
+
+            //- Блок с текстовым описанием
+
+            .text-block
+
+                .header
+                    .header__title Main goals of the event
+                    .header__text.
+                        Lorem Ipsum is simply dummy text of the printing
+                        and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since
+                        the 1500s, when an unknown printer took a
+                        galley of type.
+                .text-block__text.text-block__text_small.
+                    the release of Letraset sheets containing
+                    Lorem Ipsum passages, and more recently
+                    with desktop publishing software like
+                    Aldus PageMaker including versions of Lorem Ipsum
+
+            //- Блок с табами
+
+            .tab-view TODO:
+
+        //- Ведущие
+
+        .speakers
+
+            //- Заголовки
+
+            .header
+                .header__title Event speakers
+                .header__text When an unknown printer took a
+
+            //- Список ведущих с информацией о них
+
+            .flex-container
+
+                .speakers__speaker.speaker
+
+                    img.speaker__photo(src="img/edward.png" alt="" width="140" heiht="140")
+                    .speaker__name Edward
+                    .speaker__info.
+                        It is a long established fact that a
+                        reader will be distracted by the readable
+                        content of a page when looking at its layout
+
+                    .speaker__photo(src="img/lucy.png" alt="" width="140" heiht="140")
+                    .speaker__name Lucy
+                    .speaker__info.s
+                        It is a long established fact that a
+                        reader will be distracted by the readable
+                        content of a page when looking at its layout
+
+                    .speaker__photo(src="img/nathan.png" alt="" width="140" heiht="140")
+                    .speaker__name Nathan
+                    .speaker__info.
+                        It is a long established fact that a
+                        reader will be distracted by the readable
+                        content of a page when looking at its layout
+
+                    .speaker__photo(src="img/jacob.png" alt="" width="140" heiht="140")
+                    .speaker__name Jacob
+                    .speaker__info.
+                        It is a long established fact that a
+                        reader will be distracted by the readable
+                        content of a page when looking at its layout
+
+            //- Низ блока о ведущих
+
+            .speakers__bottom
+                .speakers__title.
+                    Many desktop publishing packages and
+                    web page editors now use Lorem
+                    Ipsum as their default model text
+                a.button.button_angle.button_blue(href="#") Register
+
+        //- Раздел с графиком мероприятия
+
+        .schedule
+
+            .schedule__row
+
+                .schedule__cell
+
+                    //- Блок с текстовым описанием
+
+                    .text-block
+
+                        .header
+                            .header__title Main goals of the event
+                            .header__text.
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s, when an unknown printer took a
+                                galley of type.
+                        .text-block__text.text-block__text_small.
+                            the release of Letraset sheets containing
+                            Lorem Ipsum passages, and more recently
+                            with desktop publishing software like
+                            Aldus PageMaker including versions of Lorem Ipsum
+                        a.text-block__link(href="#") All schedule (PDF)
+                        //-TODO:icon
+
+                .schedule__cell
+
+                    //- Блок с табами
+
+                    .tab-view TODO:
+
+
+            .schedule__row
+
+                .schedule__cell
+
+                    //-TODO:video
+
+                .schedule__cell
+
+                    //- Блок с текстовым описанием
+
+                    .text-block
+
+                        .header
+                            .header__title Main goals of the event
+                            .header__text.
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s, when an unknown printer took a
+                                galley of type.
+                        .text-block__text.text-block__text_small.
+                            the release of Letraset sheets containing
+                            Lorem Ipsum passages, and more recently
+                            with desktop publishing software like
+                            Aldus PageMaker including versions of Lorem Ipsum
+                        a.text-block__link(href="#") Youtube chanel
+                        //-TODO:icon
+
+            .schedule__row
+
+                .schedule__cell
+
+                    //- Блок с текстовым описанием
+
+                    .text-block
+
+                        .header
+                            .header__title Main goals of the event
+                            .header__text.
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s, when an unknown printer took a
+                                galley of type.
+                        .text-block__text.text-block__text_small.
+                            the release of Letraset sheets containing
+                            Lorem Ipsum passages, and more recently
+                            with desktop publishing software like
+                            Aldus PageMaker including versions of Lorem Ipsum
+                        a.text-block__link(href="#") Flickr stream
+                        //-TODO:icon
+
+                .schedule__cell
+
+                    //-TODO:slider
+
+        //- Блок с формой оплаты
+
+        .payment
+
+            .header
+                .header__title The most simple way to launch your event
+                .header__text.
+                    There are many variations of passages
+                    of Lorem Ipsum available, but the majority
+                    have suffered alteration in some form
+
+            //- Форма оплаты
+
+            .payment__form
+                input.payment__input(type="text")
+                input.payment__input(type="text")
+                select.payment__select
+                    //-TODO: Select plan text
+                    option 1 Day - $20
+                    option 2 Day - $25
+                    option 3 Day - $40
+                input.button.button_angle.button_blue(type="submit" value="Register")
+
+        //- Спонсоры
+
+        .flex-container
+            img(src="img/sponsor-facebook.png"  alt="" width="" height="")
+            img(src="img/sponsor-jquery.png"    alt="" width="" height="")
+            img(src="img/sponsor-envato.png"    alt="" width="" height="")
+            img(src="img/sponsor-tumblr.png"    alt="" width="" height="")
+            img(src="img/sponsor-atlassian.png" alt="" width="" height="")
+
+        //- Карта с местом мероприятия
+
+        //-TODO:map
+
+    //- Подвал страницы
+
+    .main__footer.page-footer
+
+        .page-footer__top
+
+            .page-footer__signed
+
+                .page-footer__signed-count.
+                    253 People Have Signed In Since Juli
+
+                .page-footer__text.
+                    Contrary to popular belief,
+                    Lorem Ipsum is not simply random text.
+
+                .page-footer__line
+
+                    //-TODO: pics
+
+                    a(href="#") facebook
+                    a(href="#") twitter
+
+            .page-footer__help
+
+                .page-footer__title Need Help?
+
+                .page-footer__text.
+                    If you need help with something else
+                    please see our fully searchable
+                    <a href="#">FAQs</a> or drop us a line at
+                    <a href="#">hi@eventure.com</a>
+                    and we'll be happy to help you out!
+
+            .page-footer__address
+
+                .page-footer__title Get In Touch
+
+                //-TODO:icons
+
+                .page-footer__line +62 853 539 2001
+                .page-footer__line: a(href="#") hi@eventide.com
+                .page-footer__line: a(href="#") Eventidesupport
+
+        .page-footer__bottom
+
+            .copyright Copyright &copy; Eventide
+
 
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
     script(src="js/bootstrap.bundle.js")
