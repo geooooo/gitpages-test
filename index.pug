@@ -17,13 +17,19 @@ html(lang="ru")
             //- Логотип
 
             .col: .main__logo
-                img(src="img/logo.png" alt="Eventide" widt="550" height="155")
+
+                .d-none.d-md-block: img(src="img/logo.png" alt="Eventide" widt="550" height="155")
+                .d-block.d-md-none: img(src="img/logo.png" alt="Eventide" width="350")
 
             //- Адресс и место проведения
 
             .w-100
 
-            .col: .main__location-address November 08-10 | Sydney
+            .col
+                .d-none.d-md-block
+                    .main__location-address November 08-10 | Sydney
+                .d-block.d-md-none
+                    .main__location-address November 08-10 Sydney
 
             .w-100
 
