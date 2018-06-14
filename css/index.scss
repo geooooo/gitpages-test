@@ -2,3 +2,69 @@
 @import "reset.scss";
 
 
+// TODO: fonts
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.button {
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6a7079;
+
+    &:hover,
+    &:active {
+        color: #fff;
+        background-color: #7ea4e8;
+    }
+}
+
+
+.main__header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: {
+        color: #525b64;
+        image: url("../img/header-bg.jpg");
+        size: cover;
+        repeat: no-repeat;
+    }
+
+    .main__logo {
+        text-align: center;
+    }
+
+    .main__location-address {
+        margin-top: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .main__top-title {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 1.3rem;
+        color: #fff;
+    }
+
+    .flex-container {
+        margin-top: 30px;
+
+        > * {
+            margin-right: 25px;
+        }
+
+        > *:last-child {
+            margin-right: 0;
+        }
+    }
+}
