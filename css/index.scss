@@ -1,3 +1,4 @@
+@import "font-awesome.scss";
 @import "bootstrap.scss";
 @import "reset.scss";
 
@@ -11,7 +12,14 @@ $font-color: #838689;
 
 .flex-container {
     display: flex;
+}
+
+.flex-container_justify-center {
     justify-content: center;
+}
+
+.flex-container_justify-space-between {
+    justify-content: space-between;
 }
 
 
@@ -29,6 +37,16 @@ $font-color: #838689;
     &:active {
         color: #fff;
         background-color: #7ea4e8;
+    }
+
+
+    .fa {
+        margin-left: 5px;
+        padding: 0px 5px;
+        border-radius: 100%;
+        font-weight: bold;
+        color: #7ea4e8;
+        background-color: #fff;
     }
 }
 
@@ -81,7 +99,25 @@ $font-color: #838689;
     .tab-content {
         border: 2px solid #ececec;
         border-top: none;
-        padding: 30px 45px 40px 20px;
+        padding: 30px 45px 20px 20px;
+        color: $font-color;
+    }
+}
+
+
+.marked-list {
+    list-style-type: none;
+    padding-left: 20px;
+
+    .marked-list__item {
+        padding: 10px 0;
+        .fa {
+            margin-right: 10px;
+            padding: 2px;
+            border-radius: 100%;
+            color: #fff;
+            background-color: #4ed2d7;
+        }
     }
 }
 
@@ -133,4 +169,8 @@ $font-color: #838689;
 
 .main__content {
     margin-top: 100px;
+
+    .text-block {
+        margin-bottom: 30px;
+    }
 }
