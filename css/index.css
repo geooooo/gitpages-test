@@ -9004,6 +9004,9 @@ a:hover, a:active {
   text-transform: uppercase;
   color: #fff;
   background-color: #6a7079;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-property: background-color;
 }
 
 .button:hover, .button:active {
