@@ -1,5 +1,5 @@
 doctype html
-html(lang="ru")
+html(lang="en")
 
     head
 
@@ -19,7 +19,7 @@ html(lang="ru")
             .col: .main__logo
 
                 .d-none.d-md-block: img(src="img/logo.png" alt="Eventide" widt="550" height="155")
-                .d-block.d-md-none: img(src="img/logo.png" alt="Eventide" width="350")
+                .d-block.d-md-none: img(src="img/logo.png" alt="Eventide" width="300")
 
             //- Адресс и место проведения
 
@@ -57,11 +57,11 @@ html(lang="ru")
 
             //- Цели мероприятия
 
-            .goals
+            .goals: .container: .row
 
                 //- Блок с текстовым описанием
 
-                .text-block
+                .col-md-6: .text-block
 
                     .header
                         .header__title Main goals of the event
@@ -71,7 +71,7 @@ html(lang="ru")
                             the industry's standard dummy text ever since
                             the 1500s, when an unknown printer took a
                             galley of type.
-                    .text-block__text.text-block__text_small.
+                    .text-block__text.
                         the release of Letraset sheets containing
                         Lorem Ipsum passages, and more recently
                         with desktop publishing software like
@@ -79,7 +79,37 @@ html(lang="ru")
 
                 //- Блок с табами
 
-                .tab-view TODO:
+                .col-md-6: .tab-view
+
+                    nav: .nav.nav-tabs#goals-tab(role="tablist")
+
+                        a.nav-item.nav-link.active#goals-objective-tab(
+                            data-toggle="tab"
+                            href="#tab-objective"
+                            role="tab"
+                            aria-controls="tab-objective"
+                            aria-selected="true") Learning objective
+
+                        a.nav-item.nav-link#goals-audience-tab(
+                            data-toggle="tab"
+                            href="#tab-audience"
+                            role="tab"
+                            aria-controls="tab-audience"
+                            aria-selected="false") Target audience
+
+                    .tab-content#goals-tabContent
+
+                        .tab-pane.fade.show.active#tab-objective(
+                            role="tabpanel"
+                            aria-labelledby="goals-objective-tab")
+                                b bold
+                                div div div div div div
+
+                        .tab-pane.fade#tab-audience(
+                            role="tabpanel"
+                            aria-labelledby="goals-audience-tab")
+                                b bold1
+                                div div1 div1 div1 div1 div1
 
             //- Ведущие
 

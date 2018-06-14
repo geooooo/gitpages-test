@@ -3,6 +3,7 @@
 
 
 $transition-duration: 0.4s;
+$font-color: #838689;
 
 
 // TODO: fonts
@@ -32,9 +33,63 @@ $transition-duration: 0.4s;
 }
 
 
+.text-block {
+    .text-block__text {
+        margin-top: 30px;
+        color: $font-color;
+    }
+}
+
+
+.header {
+    color: $font-color;
+
+    .header__title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .header__text {
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+}
+
+.tab-view {
+    border: 1px solid #ececec;
+    border-radius: 4px;
+
+    .nav-tabs {
+        border: 1px solid #ececec;
+        background-color: #ececec;
+
+        .nav-item {
+            width: 50%;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            color: $font-color;
+
+            &.active {
+                color: $font-color
+            }
+        }
+    }
+
+    .tab-content {
+        border: 2px solid #ececec;
+        border-top: none;
+        padding: 30px 45px 40px 20px;
+    }
+}
+
+
 .main__header {
     display: flex;
     align-items: center;
+    align-content: center;
     height: 100%;
     background: {
         color: #525b64;
@@ -73,4 +128,9 @@ $transition-duration: 0.4s;
             margin-right: 0;
         }
     }
+}
+
+
+.main__content {
+    margin-top: 100px;
 }
