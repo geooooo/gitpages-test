@@ -2,6 +2,9 @@
 @import "reset.scss";
 
 
+$transition-duration: 0.4s;
+
+
 // TODO: fonts
 
 
@@ -17,6 +20,9 @@
     text-transform: uppercase;
     color: #fff;
     background-color: #6a7079;
+    transition-duration: $transition-duration;
+    transition-timing-function: ease;
+    transition-property: background-color;
 
     &:hover,
     &:active {
