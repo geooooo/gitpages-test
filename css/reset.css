@@ -3,6 +3,10 @@ html {
   height: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
