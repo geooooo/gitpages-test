@@ -474,4 +474,161 @@ $font-color: #838689;
             }
         }
     }
+
+    .payment {
+        padding: 140px 0;
+        background-color: #f3f3f3;
+
+        @media (max-width: 991.98px) {
+            padding: 100px 0;
+        }
+
+        @media (max-width: 767.98px) {
+            padding: 60px 0;
+        }
+
+        .header {
+            .header__title {
+                text-align: center;
+            }
+
+            .header__text {
+                text-align: center;
+            }
+        }
+
+        .payment__form {
+            margin-top: 50px;
+            padding: 45px;
+            background-color: #fff;
+
+            @media (max-width: 767.98px) {
+                margin-top: 30px;
+                padding: 30px;
+            }
+
+            input,
+            select {
+                padding: 10px;
+                width: 100%;
+            }
+
+            .payment__submit {
+                position: relative;
+                border-radius: 100%;
+
+                @media (max-width: 991.98px) {
+                    margin-top: 20px;
+                }
+
+                &:hover,
+                &:active {
+                    color: #fff;
+                    background-color: #7ea4e8;
+
+                    .fa {
+                        color: #7ea4e8;
+                    }
+                }
+
+                input {
+                    border: none;
+                    padding-right: 45px;
+                    padding-left: 30px;
+                    width: auto;
+                    outline: none;
+                    cursor: pointer;
+                }
+
+                .fa {
+                    position: absolute;
+                    right: 25px;
+                    top: 13px;
+                    z-index: 101;
+                    padding: 0px 5px;
+                    border-radius: 100%;
+                    font-weight: bold;
+                    color: #6a7079;
+                    background-color: #fff;
+                }
+            }
+
+            .payment__input {
+                position: relative;
+                width: 200px;
+
+                @media (max-width: 767.98px) {
+                    margin-top: 20px;
+                    width: 100%;
+                }
+
+                select {
+                    border: none;
+                    border-radius: 4px;
+                    padding: 15px 10px;
+                    color: #fff;
+                    outline: none;
+                    background-color: #525b64;
+                    cursor: pointer;
+
+                    &:focus {
+                        color: #fff;
+                        background-color: #2cc7c1;
+                    }
+
+                    option {
+                        color: #2cc7c1;
+                        background-color: #525b64;
+                    }
+                }
+
+                input {
+                    outline: none;
+                    z-index: 100;
+                    border: #f3f3f3 2px solid;
+                    border-radius: 4px;
+                    color: $font-color;
+                    background-color: #f3f3f3;
+                    transition-duration: $transition-duration;
+                    transition-timing-function: easy;
+                    transition-property: border-color;
+
+                    &:focus {
+                        border-color: #2cc7c1;
+                        color: #6a7079;
+                        background-color: #fff;
+                    }
+                }
+
+                .fa {
+                    display: none;
+                    position: absolute;
+                    right: 10px;
+                    top: 13px;
+                    z-index: 101;
+                    padding: 2px 2px;
+                    border-radius: 100%;
+                    font-weight: bold;
+                    color: #fff;
+                    background-color: #2cc7c1;
+                }
+            }
+        }
+    }
+
+    .sponsor {
+        padding: 60px 0;
+
+        @media (max-width: 767.98px) {
+            padding: 20px;
+
+            img {
+                margin-top: 20px;
+            }
+
+            .text-center:first-child img {
+                margin-top: 0px;
+            }
+        }
+    }
 }

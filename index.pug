@@ -47,7 +47,7 @@ html(lang="en")
 
             .col: .flex-container
 
-                a.button(href="#")
+                a.button(href="#paymentForm")
                     | Register
                     i.fa.fa-angle-right(aria-hidden="true")
                 a.button(href="#") Discover
@@ -182,7 +182,7 @@ html(lang="en")
                         Many desktop publishing packages and
                         web page editors now use Lorem
                         Ipsum as their default model text
-                    a.button(href="#")
+                    a.button(href="#paymentForm")
                         | Register
                         i.fa.fa-angle-right(aria-hidden="true")
 
@@ -401,35 +401,44 @@ html(lang="en")
                                 .carousel-item: .carousel-content Слайд 5
             //- Блок с формой оплаты
 
-            .payment
+            .payment: .container
 
-                .header
-                    .header__title The most simple way to launch your event
-                    .header__text.
-                        There are many variations of passages
-                        of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form
+                .row
+                    .col: .header
+                        .header__title The most simple way to launch your event
+                        .header__text.
+                            There are many variations of passages
+                            of Lorem Ipsum available, but the majority
+                            have suffered alteration in some form
 
-                //- Форма оплаты
+                    //- Форма оплаты
+                .row
+                    .col: form.row.payment__form#paymentForm(action="#")
 
-                .payment__form
-                    input.payment__input(type="text")
-                    input.payment__input(type="text")
-                    select.payment__select
-                        //-TODO: Select plan text
-                        option 1 Day - $20
-                        option 2 Day - $25
-                        option 3 Day - $40
-                    input.button.button_angle.button_blue(type="submit" value="Register")
+                        .col-lg-3.col-md-4: .payment__input
+                            input#name(type="text" placeholder="Your name")
+                            i.fa.fa-check(aria-hidden="true")
+
+                        .col-lg-3.col-md-4: .payment__input
+                            input#email(type="text" placeholder="Email address")
+                            i.fa.fa-check(aria-hidden="true")
+
+                        .col-lg-3.col-md-4: .payment__input: select#price
+                            option(value="1") 1 Day - $20
+                            option(value="2") 2 Day - $25
+                            option(value="3") 3 Day - $40
+
+                        .col-lg-3: .d-flex.justify-content-center: .payment__submit
+                            input.button(type="submit" value="Register")
+                            i.fa.fa-angle-right(aria-hidden="true")
 
             //- Спонсоры
 
-            .flex-container
-                img(src="img/sponsor-facebook.png"  alt="" width="" height="")
-                img(src="img/sponsor-jquery.png"    alt="" width="" height="")
-                img(src="img/sponsor-envato.png"    alt="" width="" height="")
-                img(src="img/sponsor-tumblr.png"    alt="" width="" height="")
-                img(src="img/sponsor-atlassian.png" alt="" width="" height="")
+            .sponsor: .container: .row
+
+                .col-md-4.text-center: img(src="img/sponsor-facebook.png" alt="Facebook" width="157" height="36")
+                .col-md-4.text-center: img(src="img/sponsor-jquery.png"   alt="JQuery" width="157" height="36")
+                .col-md-4.text-center: img(src="img/sponsor-envato.png"   alt="Envato" width="157" height="36")
 
             //- Карта с местом мероприятия
 
