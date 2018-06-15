@@ -45,9 +45,9 @@ html(lang="en")
 
             //- Кнопки
 
-            .col: .flex-container.flex-container_justify-center
+            .col: .flex-container
 
-                a.button(href="#")
+                a.button(href="#paymentForm")
                     | Register
                     i.fa.fa-angle-right(aria-hidden="true")
                 a.button(href="#") Discover
@@ -62,7 +62,7 @@ html(lang="en")
 
                 //- Блок с текстовым описанием
 
-                .col-md-6: .text-block.mr-5
+                .col-md-6: .text-block
 
                     .header
                         .header__title Main goals of the event
@@ -131,42 +131,44 @@ html(lang="en")
 
             //- Ведущие
 
-            .speakers
+            .speakers: .container
 
                 //- Заголовки
 
-                .header
+                .row: .col: .header
                     .header__title Event speakers
                     .header__text When an unknown printer took a
 
                 //- Список ведущих с информацией о них
 
-                .flex-container
+                .speakers__list.row.no-gutters
 
-                    .speakers__speaker.speaker
-
-                        img.speaker__photo(src="img/edward.png" alt="" width="140" heiht="140")
+                    .col-md-3: .speaker
+                        .speaker__photo: img(src="img/speaker-photo.png" alt="" width="140" heiht="140")
                         .speaker__name Edward
                         .speaker__info.
                             It is a long established fact that a
                             reader will be distracted by the readable
                             content of a page when looking at its layout
 
-                        .speaker__photo(src="img/lucy.png" alt="" width="140" heiht="140")
+                    .col-md-3: .speaker
+                        .speaker__photo: img(src="img/speaker-photo.png" alt="" width="140" heiht="140")
                         .speaker__name Lucy
                         .speaker__info.s
                             It is a long established fact that a
                             reader will be distracted by the readable
                             content of a page when looking at its layout
 
-                        .speaker__photo(src="img/nathan.png" alt="" width="140" heiht="140")
+                    .col-md-3: .speaker
+                        .speaker__photo: img(src="img/speaker-photo.png" alt="" width="140" heiht="140")
                         .speaker__name Nathan
                         .speaker__info.
                             It is a long established fact that a
                             reader will be distracted by the readable
                             content of a page when looking at its layout
 
-                        .speaker__photo(src="img/jacob.png" alt="" width="140" heiht="140")
+                    .col-md-3: .speaker
+                        .speaker__photo: img(src="img/speaker-photo.png" alt="" width="140" heiht="140")
                         .speaker__name Jacob
                         .speaker__info.
                             It is a long established fact that a
@@ -175,20 +177,22 @@ html(lang="en")
 
                 //- Низ блока о ведущих
 
-                .speakers__bottom
+                .row: .col: .speakers__bottom
                     .speakers__title.
                         Many desktop publishing packages and
                         web page editors now use Lorem
                         Ipsum as their default model text
-                    a.button.button_angle.button_blue(href="#") Register
+                    a.button(href="#paymentForm")
+                        | Register
+                        i.fa.fa-angle-right(aria-hidden="true")
 
             //- Раздел с графиком мероприятия
 
-            .schedule
+            .schedule: .container
 
-                .schedule__row
+                .row.schedule__row
 
-                    .schedule__cell
+                    .col-md-6.schedule__cell
 
                         //- Блок с текстовым описанием
 
@@ -202,28 +206,162 @@ html(lang="en")
                                     the industry's standard dummy text ever since
                                     the 1500s, when an unknown printer took a
                                     galley of type.
-                            .text-block__text.text-block__text_small.
+                            .text-block__text.
                                 the release of Letraset sheets containing
                                 Lorem Ipsum passages, and more recently
                                 with desktop publishing software like
                                 Aldus PageMaker including versions of Lorem Ipsum
-                            a.text-block__link(href="#") All schedule (PDF)
-                            //-TODO:icon
+                            a.text-block__link(href="#")
+                                i.fa.fa-arrow-down(aria-hidden="true")
+                                | All schedule (PDF)
 
-                    .schedule__cell
+                    .col-md-6.schedule__cell
 
                         //- Блок с табами
 
-                        .tab-view TODO:
+                        .tab-view
 
+                            nav: .nav.nav-tabs#schedule-tab(role="tablist")
 
-                .schedule__row
+                                a.nav-item.nav-link.active#schedule-nov18-tab(
+                                    data-toggle="tab"
+                                    href="#tab-nov18"
+                                    role="tab"
+                                    aria-controls="tab-nov18"
+                                    aria-selected="true") Nov 18
 
-                    .schedule__cell
+                                a.nav-item.nav-link#schedule-nov19-tab(
+                                    data-toggle="tab"
+                                    href="#tab-nov19"
+                                    role="tab"
+                                    aria-controls="tab-nov19"
+                                    aria-selected="false") Nov 19
 
-                        //-TODO:video
+                                a.nav-item.nav-link#schedule-nov20-tab(
+                                    data-toggle="tab"
+                                    href="#tab-nov20"
+                                    role="tab"
+                                    aria-controls="tab-nov20"
+                                    aria-selected="false") Nov 20
 
-                    .schedule__cell
+                            .tab-content#schedule-tabContent
+
+                                .tab-pane.fade.show.active#tab-nov18(
+                                    role="tabpanel"
+                                    aria-labelledby="schedule-nov18-tab")
+
+                                        .accordion#accordionSchedule
+                                            .card
+
+                                                .card-header#heading10
+                                                    h5.mb-0
+                                                        button.btn.btn-link(
+                                                            type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#collapse10"
+                                                            aria-expanded="true"
+                                                            aria-controls="collapse10")
+                                                                .float-left.accordion__time 10:00 AM
+                                                                .float-left.accordion__header Lorem Ipsum is simply
+                                                                .float-right: i.fa.fa-plus-circle(aria-hidden="true")
+
+                                                .collapse#collapse10(
+                                                    aria-labelledby="heading10"
+                                                    data-parent="#accordionSchedule")
+                                                    .card-body.
+                                                        Lorem Ipsum is simply dummy text of the
+                                                        printing and typesetting industry.
+                                                        Lorem Ipsum has been the industry's
+                                                        standard dummy text ever since the 1500s,
+                                                        when an unknown printer took a galley of type.
+
+                                                .card-header#heading02
+                                                    h5.mb-0
+                                                        button.btn.btn-link(
+                                                            type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#collapse02"
+                                                            aria-expanded="true"
+                                                            aria-controls="collapse02")
+                                                                .float-left.accordion__time 02:00 PM
+                                                                .float-left.accordion__header Typesetting industry
+                                                                .float-right: i.fa.fa-plus-circle(aria-hidden="true")
+
+                                                .collapse#collapse02(
+                                                    aria-labelledby="heading02"
+                                                    data-parent="#accordionSchedule")
+                                                    .card-body.
+                                                        Lorem Ipsum is simply dummy text of the
+                                                        printing and typesetting industry.
+                                                        Lorem Ipsum has been the industry's
+                                                        standard dummy text ever since the 1500s,
+                                                        when an unknown printer took a galley of type.
+
+                                                .card-header#heading08
+                                                    h5.mb-0
+                                                        button.btn.btn-link(
+                                                            type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#collapse08"
+                                                            aria-expanded="true"
+                                                            aria-controls="collapse08")
+                                                                .float-left.accordion__time 08:00 PM
+                                                                .float-left.accordion__header When unknown
+                                                                .float-right: i.fa.fa-plus-circle(aria-hidden="true")
+
+                                                .collapse#collapse08(
+                                                    aria-labelledby="heading08"
+                                                    data-parent="#accordionSchedule")
+                                                    .card-body.
+                                                        Lorem Ipsum is simply dummy text of the
+                                                        printing and typesetting industry.
+                                                        Lorem Ipsum has been the industry's
+                                                        standard dummy text ever since the 1500s,
+                                                        when an unknown printer took a galley of type.
+
+                                .tab-pane.fade#tab-nov19(
+                                    role="tabpanel"
+                                    aria-labelledby="schedule-nov19-tab")
+                                        p text1
+
+                                .tab-pane.fade#tab-nov20(
+                                    role="tabpanel"
+                                    aria-labelledby="schedule-nov20-tab")
+                                        p text2
+
+                .row.schedule__row
+
+                    .col-md-6.schedule__cell
+
+                        //-video 570 x 315
+                        video(poster="img/video-poster.png")
+
+                    .col-md-6.schedule__cell
+
+                        //- Блок с текстовым описанием
+
+                        .text-block.mb-0
+
+                            .header
+                                .header__title Main goals of the event
+                                .header__text.
+                                    Lorem Ipsum is simply dummy text of the printing
+                                    and typesetting industry. Lorem Ipsum has been
+                                    the industry's standard dummy text ever since
+                                    the 1500s, when an unknown printer took a
+                                    galley of type.
+                            .text-block__text.
+                                the release of Letraset sheets containing
+                                Lorem Ipsum passages, and more recently
+                                with desktop publishing software like
+                                Aldus PageMaker including versions of Lorem Ipsum
+                            a.text-block__link(href="#")
+                                | All schedule (PDF)
+                                i.fa.fa-arrow-right(aria-hidden="true")
+
+                .row.schedule__row
+
+                    .col-md-6.schedule__cell
 
                         //- Блок с текстовым описанием
 
@@ -237,125 +375,124 @@ html(lang="en")
                                     the industry's standard dummy text ever since
                                     the 1500s, when an unknown printer took a
                                     galley of type.
-                            .text-block__text.text-block__text_small.
+                            .text-block__text.
                                 the release of Letraset sheets containing
                                 Lorem Ipsum passages, and more recently
                                 with desktop publishing software like
                                 Aldus PageMaker including versions of Lorem Ipsum
-                            a.text-block__link(href="#") Youtube chanel
-                            //-TODO:icon
+                            a.text-block__link(href="#")
+                                | Flickr stream
+                                i.fa.fa-arrow-right(aria-hidden="true")
 
-                .schedule__row
+                    .col-md-6.schedule__cell
 
-                    .schedule__cell
-
-                        //- Блок с текстовым описанием
-
-                        .text-block
-
-                            .header
-                                .header__title Main goals of the event
-                                .header__text.
-                                    Lorem Ipsum is simply dummy text of the printing
-                                    and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text ever since
-                                    the 1500s, when an unknown printer took a
-                                    galley of type.
-                            .text-block__text.text-block__text_small.
-                                the release of Letraset sheets containing
-                                Lorem Ipsum passages, and more recently
-                                with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum
-                            a.text-block__link(href="#") Flickr stream
-                            //-TODO:icon
-
-                    .schedule__cell
-
-                        //-TODO:slider
-
+                        .carousel.slide#carouselGoals(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.active(data-target="#carouselGoals" data-slide-to="0")
+                                li(data-target="#carouselGoals" data-slide-to="1")
+                                li(data-target="#carouselGoals" data-slide-to="2")
+                                li(data-target="#carouselGoals" data-slide-to="3")
+                                li(data-target="#carouselGoals" data-slide-to="4")
+                            .carousel-inner
+                                .carousel-item.active: .carousel-content Slide 1
+                                .carousel-item: .carousel-content Slide 2
+                                .carousel-item: .carousel-content Slide 3
+                                .carousel-item: .carousel-content Slide 4
+                                .carousel-item: .carousel-content Slide 5
             //- Блок с формой оплаты
 
-            .payment
+            .payment: .container
 
-                .header
-                    .header__title The most simple way to launch your event
-                    .header__text.
-                        There are many variations of passages
-                        of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form
+                .row
+                    .col: .header
+                        .header__title The most simple way to launch your event
+                        .header__text.
+                            There are many variations of passages
+                            of Lorem Ipsum available, but the majority
+                            have suffered alteration in some form
 
-                //- Форма оплаты
+                    //- Форма оплаты
+                .row
+                    .col: form.row.payment__form#paymentForm(action="#")
 
-                .payment__form
-                    input.payment__input(type="text")
-                    input.payment__input(type="text")
-                    select.payment__select
-                        //-TODO: Select plan text
-                        option 1 Day - $20
-                        option 2 Day - $25
-                        option 3 Day - $40
-                    input.button.button_angle.button_blue(type="submit" value="Register")
+                        .col-lg-3.col-md-4: .payment__input
+                            input#name(type="text" placeholder="Your name")
+                            i.fa.fa-check(aria-hidden="true")
+
+                        .col-lg-3.col-md-4: .payment__input
+                            input#email(type="text" placeholder="Email address")
+                            i.fa.fa-check(aria-hidden="true")
+
+                        .col-lg-3.col-md-4: .payment__input: select#price
+                            option(value="1") 1 Day - $20
+                            option(value="2") 2 Day - $25
+                            option(value="3") 3 Day - $40
+
+                        .col-lg-3: .d-flex.justify-content-center: .payment__submit
+                            input.button(type="submit" value="Register")
+                            i.fa.fa-angle-right(aria-hidden="true")
 
             //- Спонсоры
 
-            .flex-container
-                img(src="img/sponsor-facebook.png"  alt="" width="" height="")
-                img(src="img/sponsor-jquery.png"    alt="" width="" height="")
-                img(src="img/sponsor-envato.png"    alt="" width="" height="")
-                img(src="img/sponsor-tumblr.png"    alt="" width="" height="")
-                img(src="img/sponsor-atlassian.png" alt="" width="" height="")
+            .sponsor: .container: .row
+
+                .col-md-4.text-center: img(src="img/sponsor-facebook.png" alt="Facebook" width="157" height="36")
+                .col-md-4.text-center: img(src="img/sponsor-jquery.png"   alt="JQuery" width="157" height="36")
+                .col-md-4.text-center: img(src="img/sponsor-envato.png"   alt="Envato" width="157" height="36")
 
             //- Карта с местом мероприятия
 
-            //-TODO:map
+            img.map(src="img/map.jpg" alt="Event location" width="1600" height="673")
 
         //- Подвал страницы
 
         .main__footer.page-footer
 
-            .page-footer__top
+            .container
 
-                .page-footer__signed
+                .page-footer__top: .row
 
-                    .page-footer__signed-count.
-                        253 People Have Signed In Since Juli
+                    .col-md-5: .page-footer__signed
 
-                    .page-footer__text.
-                        Contrary to popular belief,
-                        Lorem Ipsum is not simply random text.
+                        .page-footer__signed-count.
+                            <b>253</b> People Have Signed In Since Juli
 
-                    .page-footer__line
+                        .page-footer__text.
+                            Contrary to popular belief,
+                            Lorem Ipsum is not simply random text.
 
-                        //-TODO: pics
+                        .page-footer__line
+                            a(href="#"): img(src="img/fb_like.png" alt="facebook" width="77" height="20")
+                            a(href="#"): img(src="img/tw_follow.png" alt="twitter" width="119" height="20")
 
-                        a(href="#") facebook
-                        a(href="#") twitter
+                    .col-md-3: .page-footer__help
 
-                .page-footer__help
+                        .page-footer__title Need Help?
 
-                    .page-footer__title Need Help?
+                        .page-footer__text.
+                            If you need help with something else
+                            please see our fully searchable
+                            <a href="#">FAQs</a> or drop us a line at
+                            <a href="#">hi@eventure.com</a>
+                            and we'll be happy to help you out!
 
-                    .page-footer__text.
-                        If you need help with something else
-                        please see our fully searchable
-                        <a href="#">FAQs</a> or drop us a line at
-                        <a href="#">hi@eventure.com</a>
-                        and we'll be happy to help you out!
+                    .col-md-4: .page-footer__address
 
-                .page-footer__address
+                        .page-footer__title Get In Touch
+                        .page-footer__line: a(href="#")
+                            i.fa.fa-phone-square(aria-hidden="true")
+                            | +62 853 539 2001
+                        .page-footer__line: a(href="#")
+                            i.fa.fa-envelope(aria-hidden="true")
+                            | hi@eventide.com
+                        .page-footer__line: a(href="#")
+                            i.fa.fa-skype(aria-hidden="true")
+                            | Eventidesupport
 
-                    .page-footer__title Get In Touch
+            .page-footer__bottom: .container: .row
 
-                    //-TODO:icons
-
-                    .page-footer__line +62 853 539 2001
-                    .page-footer__line: a(href="#") hi@eventide.com
-                    .page-footer__line: a(href="#") Eventidesupport
-
-            .page-footer__bottom
-
-                .copyright Copyright &copy; Eventide
-
+                .col: .copyright Copyright &copy; <b>Eventide</b>
 
         script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
         script(src="js/bootstrap.bundle.js")
+        script(src="js/index.js")
