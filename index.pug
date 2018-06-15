@@ -329,13 +329,39 @@ html(lang="en")
                                     aria-labelledby="schedule-nov20-tab")
                                         p text2
 
-                .schedule__row
+                .row.schedule__row
 
-                    .schedule__cell
+                    .col-md-6.schedule__cell
 
-                        //-video
+                        //-video 570 x 315
+                        video(poster="img/video-poster.png")
 
-                    .schedule__cell
+                    .col-md-6.schedule__cell
+
+                        //- Блок с текстовым описанием
+
+                        .text-block.mb-0
+
+                            .header
+                                .header__title Main goals of the event
+                                .header__text.
+                                    Lorem Ipsum is simply dummy text of the printing
+                                    and typesetting industry. Lorem Ipsum has been
+                                    the industry's standard dummy text ever since
+                                    the 1500s, when an unknown printer took a
+                                    galley of type.
+                            .text-block__text.
+                                the release of Letraset sheets containing
+                                Lorem Ipsum passages, and more recently
+                                with desktop publishing software like
+                                Aldus PageMaker including versions of Lorem Ipsum
+                            a.text-block__link(href="#")
+                                | All schedule (PDF)
+                                i.fa.fa-arrow-right(aria-hidden="true")
+
+                .row.schedule__row
+
+                    .col-md-6.schedule__cell
 
                         //- Блок с текстовым описанием
 
@@ -354,37 +380,25 @@ html(lang="en")
                                 Lorem Ipsum passages, and more recently
                                 with desktop publishing software like
                                 Aldus PageMaker including versions of Lorem Ipsum
-                            a.text-block__link(href="#") Youtube chanel
-                            //-TODO:icon
+                            a.text-block__link(href="#")
+                                | Flickr stream
+                                i.fa.fa-arrow-right(aria-hidden="true")
 
-                .schedule__row
+                    .col-md-6.schedule__cell
 
-                    .schedule__cell
-
-                        //- Блок с текстовым описанием
-
-                        .text-block
-
-                            .header
-                                .header__title Main goals of the event
-                                .header__text.
-                                    Lorem Ipsum is simply dummy text of the printing
-                                    and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text ever since
-                                    the 1500s, when an unknown printer took a
-                                    galley of type.
-                            .text-block__text.
-                                the release of Letraset sheets containing
-                                Lorem Ipsum passages, and more recently
-                                with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum
-                            a.text-block__link(href="#") Flickr stream
-                            //-TODO:icon
-
-                    .schedule__cell
-
-                        //-TODO:slider
-
+                        .carousel.slide#carouselGoals(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.active(data-target="#carouselGoals" data-slide-to="0")
+                                li(data-target="#carouselGoals" data-slide-to="1")
+                                li(data-target="#carouselGoals" data-slide-to="2")
+                                li(data-target="#carouselGoals" data-slide-to="3")
+                                li(data-target="#carouselGoals" data-slide-to="4")
+                            .carousel-inner
+                                .carousel-item.active: .carousel-content Слайд 1
+                                .carousel-item: .carousel-content Слайд 2
+                                .carousel-item: .carousel-content Слайд 3
+                                .carousel-item: .carousel-content Слайд 4
+                                .carousel-item: .carousel-content Слайд 5
             //- Блок с формой оплаты
 
             .payment
