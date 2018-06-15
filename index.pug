@@ -394,11 +394,11 @@ html(lang="en")
                                 li(data-target="#carouselGoals" data-slide-to="3")
                                 li(data-target="#carouselGoals" data-slide-to="4")
                             .carousel-inner
-                                .carousel-item.active: .carousel-content Слайд 1
-                                .carousel-item: .carousel-content Слайд 2
-                                .carousel-item: .carousel-content Слайд 3
-                                .carousel-item: .carousel-content Слайд 4
-                                .carousel-item: .carousel-content Слайд 5
+                                .carousel-item.active: .carousel-content Slide 1
+                                .carousel-item: .carousel-content Slide 2
+                                .carousel-item: .carousel-content Slide 3
+                                .carousel-item: .carousel-content Slide 4
+                                .carousel-item: .carousel-content Slide 5
             //- Блок с формой оплаты
 
             .payment: .container
@@ -442,55 +442,56 @@ html(lang="en")
 
             //- Карта с местом мероприятия
 
-            //-TODO:map
+            img.map(src="img/map.jpg" alt="Event location" width="1600" height="673")
 
         //- Подвал страницы
 
         .main__footer.page-footer
 
-            .page-footer__top
+            .container
 
-                .page-footer__signed
+                .page-footer__top: .row
 
-                    .page-footer__signed-count.
-                        253 People Have Signed In Since Juli
+                    .col-md-5: .page-footer__signed
 
-                    .page-footer__text.
-                        Contrary to popular belief,
-                        Lorem Ipsum is not simply random text.
+                        .page-footer__signed-count.
+                            <b>253</b> People Have Signed In Since Juli
 
-                    .page-footer__line
+                        .page-footer__text.
+                            Contrary to popular belief,
+                            Lorem Ipsum is not simply random text.
 
-                        //-TODO: pics
+                        .page-footer__line
+                            a(href="#"): img(src="img/fb_like.png" alt="facebook" width="77" height="20")
+                            a(href="#"): img(src="img/tw_follow.png" alt="twitter" width="119" height="20")
 
-                        a(href="#") facebook
-                        a(href="#") twitter
+                    .col-md-3: .page-footer__help
 
-                .page-footer__help
+                        .page-footer__title Need Help?
 
-                    .page-footer__title Need Help?
+                        .page-footer__text.
+                            If you need help with something else
+                            please see our fully searchable
+                            <a href="#">FAQs</a> or drop us a line at
+                            <a href="#">hi@eventure.com</a>
+                            and we'll be happy to help you out!
 
-                    .page-footer__text.
-                        If you need help with something else
-                        please see our fully searchable
-                        <a href="#">FAQs</a> or drop us a line at
-                        <a href="#">hi@eventure.com</a>
-                        and we'll be happy to help you out!
+                    .col-md-4: .page-footer__address
 
-                .page-footer__address
+                        .page-footer__title Get In Touch
+                        .page-footer__line: a(href="#")
+                            i.fa.fa-phone-square(aria-hidden="true")
+                            | +62 853 539 2001
+                        .page-footer__line: a(href="#")
+                            i.fa.fa-envelope(aria-hidden="true")
+                            | hi@eventide.com
+                        .page-footer__line: a(href="#")
+                            i.fa.fa-skype(aria-hidden="true")
+                            | Eventidesupport
 
-                    .page-footer__title Get In Touch
+            .page-footer__bottom: .container: .row
 
-                    //-TODO:icons
-
-                    .page-footer__line +62 853 539 2001
-                    .page-footer__line: a(href="#") hi@eventide.com
-                    .page-footer__line: a(href="#") Eventidesupport
-
-            .page-footer__bottom
-
-                .copyright Copyright &copy; Eventide
-
+                .col: .copyright Copyright &copy; <b>Eventide</b>
 
         script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
         script(src="js/bootstrap.bundle.js")
