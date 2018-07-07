@@ -1,0 +1,387 @@
+doctype html
+html(lang='en')
+
+  head
+
+    title Host
+
+    meta(charset='utf-8')
+
+    link(rel='icon' sizes='32x32' href='img/icon-32x32.png')
+    link(rel='stylesheet' href='css/index.css')
+
+body.main
+
+  //- Голова страницы
+
+  header.main__header.header
+
+    //- Верхнее меню
+
+    .header__top
+
+      .container
+        .row
+
+          .one-third.column: .logo
+            a(href='#'): img(src='img/logo-light.png' width='133' height='29' alt='Ghost Host')
+
+          nav.two-thirds.column: ul.top-menu
+            li.top-menu__item: a(href='#') Home
+            li.top-menu__item: a(href='#') Domain
+            li.top-menu__item: a(href='#') Hosting
+            li.top-menu__item: a(href='#') Clients
+            li.top-menu__item: a(href='#') Blog
+            li.top-menu__item: a(href='#') Support
+
+      //- Большая центральная надпись
+
+      .top-title
+        .top-title__first-line Hello!
+        .top-title__line We our work...
+        .top-title__line And We're taking it seriously...
+
+  //- Блок основного контента
+
+  section.main__content.content
+
+    //- Блок авторизации
+
+    .authorization
+      .container: .row
+        .one-half.column: .authorization__button
+          a(href='#') Login
+        .one-half.column: .authorization__button
+          a(href='#') Register
+
+    .container
+
+      //- Раздел подбора домена
+
+      .domain
+
+        header.domain__header
+          .domain__first-line Would you like to buy a new domain ?
+          .domain__line Often you might want large blocks of text within a tag.
+
+        .domain__domain-form.domain-form
+          .domain-form__prefix www.
+          .domain-form__input: input(type='text' placeholder='What do you want ?')
+          .domain-form__postfix .com
+          .domain-form__select: select
+
+        //- Тарифы на домен
+
+        .rate-table
+          .rate-table__row
+            .rate-table__cell .COM
+            .rate-table__cell 1 Year
+            .rate-table__cell $9.00 USD
+            .rate-table__cell Transfer Price No
+          .rate-table__row
+            .rate-table__cell .NET
+            .rate-table__cell 1 Year
+            .rate-table__cell $9.00 USD
+            .rate-table__cell Transfer Price No
+
+    //- Выбор тарифа услуги
+
+    .plan: .container: .plan__container
+
+      .plan__package.plan__package_yellow
+        .plan__title Basic package
+        .plan__info.info-list
+          .info-list__item
+            .info-list__title Disk Space(GB)
+            .info-list__value 50
+          .info-list__item
+            .info-list__title Subdomains
+            .info-list__value 50
+          .info-list__item
+            .info-list__title Transfer(GB)
+            .info-list__value 50
+          .info-list__item
+            .info-list__title Data bases
+            .info-list__value 1
+          .info-list__item
+            .info-list__title Dashboards
+            .info-list__value 1
+          .info-list__item
+            .info-list__title Control Panel &amp; FTP
+          .info-list__item
+            .info-list__title Free Support
+        .plan__bottom
+          .plan__price.price
+            .price__usd $
+            .price__value 15
+            .price__text /Mo
+          .plan__button: a(href='#') Select plan
+
+      .plan__package.plan__package_gray
+        .plan__title Normal package
+        .plan__info.info-list
+          .info-list__item
+            .info-list__title Disk Space(GB)
+            .info-list__value 100
+          .info-list__item
+            .info-list__title Subdomains
+            .info-list__value 100
+          .info-list__item
+            .info-list__title Transfer(GB)
+            .info-list__value 100
+          .info-list__item
+            .info-list__title Data bases
+            .info-list__value 2
+          .info-list__item
+            .info-list__title Dashboards
+            .info-list__value 2
+          .info-list__item
+            .info-list__title Control Panel &amp; FTP
+          .info-list__item
+            .info-list__title Free Support
+        .plan__bottom
+          .plan__price.price
+            .price__usd $
+            .price__value 30
+            .price__text /Mo
+          .plan__button: a(href='#') Select plan
+
+      .plan__package.plan__package_red
+        .plan__title Big package
+        .plan__info.info-list
+          .info-list__item
+            .info-list__title Disk Space(GB)
+            .info-list__value 150
+          .info-list__item
+            .info-list__title Subdomains
+            .info-list__value 150
+          .info-list__item
+            .info-list__title Transfer(GB)
+            .info-list__value 150
+          .info-list__item
+            .info-list__title Data bases
+            .info-list__value 4
+          .info-list__item
+            .info-list__title Dashboards
+            .info-list__value 4
+          .info-list__item
+            .info-list__title Control Panel &amp; FTP
+          .info-list__item
+            .info-list__title Free Support
+        .plan__bottom
+          .plan__price.price
+            .price__usd $
+            .price__value 40
+            .price__text /Mo
+          .plan__button: a(href='#') Select plan
+
+      .plan__package.plan__package_green
+        .plan__title Biggest package
+        .plan__info.info-list
+          .info-list__item
+            .info-list__title Disk Space(GB)
+            .info-list__value 250
+          .info-list__item
+            .info-list__title Subdomains
+            .info-list__value 250
+          .info-list__item
+            .info-list__title Transfer(GB)
+            .info-list__value 250
+          .info-list__item
+            .info-list__title Data bases
+            .info-list__value 6
+          .info-list__item
+            .info-list__title Dashboards
+            .info-list__value 6
+          .info-list__item
+            .info-list__title Control Panel &amp; FTP
+          .info-list__item
+            .info-list__title Free Support
+        .plan__bottom
+          .plan__price.price
+            .price__usd $
+            .price__value 70
+            .price__text /Mo
+          .plan__button: a(href='#') Select plan
+
+    //- О нас
+
+    .about: .container: .row
+
+      .one-half.column: .about__info
+
+        .about__title About Us
+        .about__text.
+          Often you might want large
+          blocks of text within a tag.
+          A good example is writing
+          JavaScript and CSS code in
+          the script and style tags.
+          To do this, just add a.
+          right after the tag name,
+          or after the closing
+          parenthesis, if the tag has attributes.
+
+      .one-half.column: .about__person-list.person-list
+
+        .person-list__item
+          .person-list__avatar: img(src='img/johny-doe.png' width='100' height='100' alt='')
+          .person-list__name Johny Doe
+          .person-list__position Designer
+          .person-list__link-list.link-list
+            .link-list__item
+              a(class='fa fa-facebook' aria-hidden='true' href='#')
+            .link-list__item
+              a(class='fa fa-twitter' aria-hidden='true' href='#')
+            .link-list__item
+              a(class='fa fa-link' aria-hidden='true' href='#')
+
+        .person-list__item
+          .person-list__avatar: img(src='img/john-doe.png' width='100' height='100' alt='')
+          .person-list__name John Doe
+          .person-list__position Designer
+          .person-list__link-list.link-list
+            .link-list__item
+              a(class='fa fa-facebook' aria-hidden='true' href='#')
+            .link-list__item
+              a(class='fa fa-twitter' aria-hidden='true' href='#')
+            .link-list__item
+              a(class='fa fa-link' aria-hidden='true' href='#')
+
+        .person-list__item
+          .person-list__avatar: img(src='img/johnathan-doe.png' width='100' height='100' alt='')
+          .person-list__name Johnathan Doe
+          .person-list__position Designer
+          .person-list__link-list.link-list
+            .link-list__item
+              a(class='fa fa-facebook' aria-hidden='true' href='#')
+            .link-list__item
+              a(class='fa fa-twitter' aria-hidden='true' href='#')
+            .link-list__item
+              a(class='fa fa-link' aria-hidden='true' href='#')
+
+    //- Отзывы
+
+    .review
+
+      .slider
+        .container: .slider__slides
+
+          .slider__slide.slide.slide_active
+            .slide__cite: q.
+              Managing the whitespace of the rendered HTML is one of
+              the trickiest parts about learning Pug.
+            .slide__bottom
+              .slide__author John Doe 1
+              .slider__buttons
+                .slider__button.slider__button_active
+                .slider__button
+                .slider__button
+
+          .slider__slide.slide
+            .slide__cite: q.
+              Managing the whitespace of the rendered HTML is one of
+              the trickiest.
+            .slide__author John Doe 2
+
+          .slider__slide.slide
+            .slide__cite: q.
+              Managing the whitespace learning Pug.
+            .slide__bottom
+              .slide__author John Doe 3
+              .slider__buttons
+                .slider__button.slider__button_active
+                .slider__button
+                .slider__button
+
+    //- Преимущества
+
+    .container: .row: .plus-list
+
+      .three.columns: .plus-list__item
+        .plus-list__title.plus-list__title_fast-servers Fast Servers
+        .plus-list__description.
+          So, the closing tag of an HTML element will
+          touch the opening tag of the next.
+
+      .three.columns: .plus-list__item
+        .plus-list__title.plus-list__title_cloud-servers Cloud Servers
+        .plus-list__description.
+          This is generally not a problem for
+          block-level elements like paragraphs.
+
+      .three.columns: .plus-list__item
+        .plus-list__title.plus-list__title_domain-transfer Domain Transfers
+        .plus-list__description.
+          So, the closing tag of an HTML element will
+          touch the opening tag of the next.
+
+      .three.columns: .plus-list__item
+        .plus-list__title.plus-list__title_live-support Live Support
+        .plus-list__description.
+          This is generally not a problem for
+          block-level elements like paragraphs.
+
+  //- Подвал страницы
+
+  footer.main__footer.footer: .container
+
+    //- Верхнее меню
+
+    .footer__top
+      .row
+        .one-half.column: .logo
+          a(href='#'): img(src='img/logo-dark.png' width='' height='' alt='Ghost Host')
+        nav.one-half.column: ul.bottom-menu
+          li.bottom-menu__item: a(href='#') Home
+          li.bottom-menu__item: a(href='#') About Us
+          li.bottom-menu__item: a(href='#') Blog
+          li.bottom-menu__item: a(href='#') Policy
+          li.bottom-menu__item: a(href='#') Contact
+
+    //- Дополнительная информация о хостинговой компании
+
+    .row.footer__bottom
+
+      .one-third.column: .footer__info.
+        You should use Skeleton if you're embarking on a
+        smaller project.
+
+      //- Ещё одно меню навигации
+
+      .one-third.column: .table-nav
+        .table-nav__row
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Support
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Site Map
+        .table-nav__row
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Account
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Whois Search
+        .table-nav__row
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Product Catalog
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Web Mail
+        .table-nav__row
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Short Codes
+          .table-nav__cell: a(href='#')
+            i(class='fa fa-angle-right' aria-hidden='true')
+            .table-nav__text Find Domain
+
+      //- Контактная информация
+
+      .one-third.column: .contact
+        .contact__phone: i(class='fa fa-phone' aria-hidden='true') &nbsp; 8800-555-35-35
+        .contact__mail: a(href='#' class='fa fa-envelope' aria-hidden='true') &nbsp; vasia@mail.com
+        .contact__location Русь, улица Кукуево, 1433

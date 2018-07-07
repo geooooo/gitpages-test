@@ -1,0 +1,11 @@
+{
+  "name": "skeleton-scss-pug-learn",
+  "version": "1.0.0",
+  "author": "Iurii",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
